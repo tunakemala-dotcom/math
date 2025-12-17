@@ -1,16 +1,30 @@
-function checkAnswer(inputId, correctAnswer, feedbackId) {
-    // Kullanıcının girdiği cevabı al
-    var input = document.getElementById(inputId);
-    var feedback = document.getElementById(feedbackId);
-    var userVal = input.value.trim(); // Boşlukları temizle
+function checkEnter(event, inputId, correctAnswer, feedbackId) {
+    // Only works when ENTER key is pressed
+    if (event.key === "Enter") {
+        
+        var input = document.getElementById(inputId);
+        var feedback = document.getElementById(feedbackId);
+        var userVal = input.value.trim();
+        
+        // Find the "Solution" (details) element right after the input container
+        var container = input.parentElement;
+        var solutionDetails = container.nextElementSibling;
 
-    // Cevabı kontrol et
-    if (userVal == correctAnswer) {
-        feedback.innerHTML = "✅ <b>Doğru!</b> Harika gidiyorsun.";
-        feedback.style.color = "#00c853"; // Yeşil renk
-        feedback.style.fontWeight = "bold";
-    } else {
-        feedback.innerHTML = "❌ <b>Yanlış.</b> Aşağıdaki 'Çözümü Göster' butonuna tıklayarak adımları incele.";
-        feedback.style.color = "#d50000"; // Kırmızı renk
+        if (userVal == correctAnswer) {
+            // IF CORRECT
+            feedback.innerHTML = "✅ <b>Correct!</b> Great job.";
+            feedback.style.color = "#00c853"; // Green
+            feedback.style.fontWeight = "bold";
+            
+        } else {
+            // IF WRONG
+            feedback.innerHTML = "❌ <b>Incorrect.</b> The solution has opened below 👇";
+            feedback.style.color = "#d50000"; // Red
+            
+            // Automatically open the hidden solution
+            if (solutionDetails && solutionDetails.tagName === 'DETAILS') {
+                solutionDetails.open = true;
+            }
+        }
     }
 }

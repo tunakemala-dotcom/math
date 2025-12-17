@@ -320,10 +320,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3-practice-task-indeterminate-form" class="md-nav__link">
+  <a href="#3-practice-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Practice Task (Indeterminate Form)
+        3. Practice Task
       
     </span>
   </a>
@@ -477,10 +477,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3-practice-task-indeterminate-form" class="md-nav__link">
+  <a href="#3-practice-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Practice Task (Indeterminate Form)
+        3. Practice Task
       
     </span>
   </a>
@@ -549,103 +549,94 @@
 
 
 <h1 id="student-guide-learning-differential-calculus">Student Guide: Learning Differential Calculus</h1>
-<p>Welcome to your interactive guide to mathematical analysis! In this module, we will master the fundamental concept of <strong>Limits</strong>.</p>
+<p>Welcome to your interactive guide to mathematical analysis!</p>
 <div class="admonition tip">
 <p class="admonition-title">How to use this guide</p>
-<p><strong>Interactive Mode Active:</strong> Type your answer in the box and click "Check". If you are stuck, click the "Show Solution" tab to see the step-by-step math.</p>
+<p><strong>Interactive Mode:</strong> Type your answer in the box and press <strong>ENTER</strong>.
+If your answer is wrong, the solution will open automatically!</p>
 </div>
 <hr />
 <h2 id="topic-1-limits-of-sequences">Topic 1: Limits of Sequences</h2>
 <h3 id="1-practice-task">1. Practice Task</h3>
 <p>Consider the sequence <span class="arithmatex">\(a_n = \frac{n+1}{n}\)</span>. What is the limit as <span class="arithmatex">\(n \to \infty\)</span>?</p>
 <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-    <p><b>Your Answer:</b></p>
-    <input type="text" id="ans1" placeholder="Type answer (e.g., 1)" style="padding: 5px;">
-    <button onclick="checkAnswer('ans1', '1', 'msg1')" style="padding: 5px 10px; cursor: pointer;">Check</button>
-    <p id="msg1" style="margin-top: 10px;"></p>
+    <p><b>Your Answer (Press Enter):</b></p>
+    <input type="text" id="ans1" placeholder="Type answer & hit Enter" 
+           onkeypress="checkEnter(event, 'ans1', '1', 'msg1')" 
+           style="padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+    <p id="msg1" style="margin-top: 10px; font-size: 0.9em;"></p>
 </div>
+
 <details class="success">
 <summary>Show Solution</summary>
-<p><strong>Step-by-Step Calculation:</strong></p>
-<ol>
-<li>Split the fraction:
-    $<span class="arithmatex">\(\frac{n+1}{n} = \frac{n}{n} + \frac{1}{n} = 1 + \frac{1}{n}\)</span>$</li>
-<li>As <span class="arithmatex">\(n \to \infty\)</span>, the term <span class="arithmatex">\(\frac{1}{n}\)</span> becomes <span class="arithmatex">\(0\)</span>.</li>
-<li>Result:
-    $<span class="arithmatex">\(1 + 0 = 1\)</span>$</li>
-</ol>
+<p><strong>Step-by-Step Calculation:</strong>
+$<span class="arithmatex">\(\lim_{n \to \infty} \left( 1 + \frac{1}{n} \right) = 1 + 0 = 1\)</span>$</p>
 </details>
 <hr />
 <h2 id="topic-2-limits-of-functions">Topic 2: Limits of Functions</h2>
 <h3 id="2-practice-task-the-hole">2. Practice Task (The "Hole")</h3>
 <p>Compute the limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-    <p><b>Your Answer:</b></p>
-    <input type="text" id="ans2" placeholder="Type answer (e.g., 5)" style="padding: 5px;">
-    <button onclick="checkAnswer('ans2', '2', 'msg2')" style="padding: 5px 10px; cursor: pointer;">Check</button>
-    <p id="msg2" style="margin-top: 10px;"></p>
+    <p><b>Your Answer (Press Enter):</b></p>
+    <input type="text" id="ans2" placeholder="Type answer & hit Enter" 
+           onkeypress="checkEnter(event, 'ans2', '2', 'msg2')" 
+           style="padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+    <p id="msg2" style="margin-top: 10px; font-size: 0.9em;"></p>
 </div>
+
 <details class="success">
 <summary>Show Solution</summary>
-<p><strong>Analysis:</strong></p>
-<ol>
-<li><strong>Direct substitution</strong> gives <span class="arithmatex">\(\frac{0}{0}\)</span> (Undefined).</li>
-<li><strong>Factorize:</strong> <span class="arithmatex">\(x^2 - 1 = (x-1)(x+1)\)</span>.</li>
-<li><strong>Simplify:</strong>
-    $<span class="arithmatex">\(\lim_{x \to 1} \frac{(x-1)(x+1)}{x-1} = \lim_{x \to 1} (x+1)\)</span>$</li>
-<li><strong>Solve:</strong> <span class="arithmatex">\(1 + 1 = 2\)</span>.</li>
-</ol>
+<p>Factorize and simplify:
+$<span class="arithmatex">\(\lim_{x \to 1} (x+1) = 1+1 = 2\)</span>$</p>
 </details>
 <hr />
 <h2 id="topic-3-algebra-of-limits">Topic 3: Algebra of Limits</h2>
-<h3 id="3-practice-task-indeterminate-form">3. Practice Task (Indeterminate Form)</h3>
+<h3 id="3-practice-task">3. Practice Task</h3>
 <p>Compute the limit of <span class="arithmatex">\(f(x) = \frac{2x^2 - 2}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-    <p><b>Your Answer:</b></p>
-    <input type="text" id="ans3" placeholder="Type answer" style="padding: 5px;">
-    <button onclick="checkAnswer('ans3', '4', 'msg3')" style="padding: 5px 10px; cursor: pointer;">Check</button>
-    <p id="msg3" style="margin-top: 10px;"></p>
+    <p><b>Your Answer (Press Enter):</b></p>
+    <input type="text" id="ans3" placeholder="Type answer & hit Enter" 
+           onkeypress="checkEnter(event, 'ans3', '4', 'msg3')" 
+           style="padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+    <p id="msg3" style="margin-top: 10px; font-size: 0.9em;"></p>
 </div>
+
 <details class="success">
 <summary>Show Solution</summary>
-<ol>
-<li>Factor out 2: <span class="arithmatex">\(2(x^2 - 1)\)</span>.</li>
-<li>Expand: <span class="arithmatex">\(2(x-1)(x+1)\)</span>.</li>
-<li>Cancel <span class="arithmatex">\((x-1)\)</span>.</li>
-<li>Limit is <span class="arithmatex">\(2(1+1) = 4\)</span>.</li>
-</ol>
+<div class="arithmatex">\[2(x^2-1) \to 2(x-1)(x+1) \to 2(1+1) = 4\]</div>
 </details>
 <hr />
 <h2 id="finale-final-test">Finale: Final Test</h2>
 <h3 id="task-a-sequence-limit">Task A: Sequence Limit</h3>
 <p>Find limit of <span class="arithmatex">\(a_n = \frac{3n}{n+2}\)</span>.</p>
 <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-    <input type="text" id="ans4" placeholder="Answer..." style="padding: 5px;">
-    <button onclick="checkAnswer('ans4', '3', 'msg4')" style="padding: 5px 10px; cursor: pointer;">Check</button>
+    <input type="text" id="ans4" placeholder="Answer..." 
+           onkeypress="checkEnter(event, 'ans4', '3', 'msg4')" 
+           style="padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
     <p id="msg4" style="margin-top: 10px;"></p>
 </div>
 
 <details class="check">
 <summary>Show Solution</summary>
 <p>Divide by highest power (<span class="arithmatex">\(n\)</span>):
-$<span class="arithmatex">\(\frac{3}{1 + \frac{2}{n}} \to \frac{3}{1+0} = 3\)</span>$</p>
+$<span class="arithmatex">\(\frac{3}{1 + 0} = 3\)</span>$</p>
 </details>
 <h3 id="task-b-function-limit">Task B: Function Limit</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 + 3x}{x}\)</span> as <span class="arithmatex">\(x \to 0\)</span>.</p>
 <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-    <input type="text" id="ans5" placeholder="Answer..." style="padding: 5px;">
-    <button onclick="checkAnswer('ans5', '3', 'msg5')" style="padding: 5px 10px; cursor: pointer;">Check</button>
+    <input type="text" id="ans5" placeholder="Answer..." 
+           onkeypress="checkEnter(event, 'ans5', '3', 'msg5')" 
+           style="padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px;">
     <p id="msg5" style="margin-top: 10px;"></p>
 </div>
 
 <details class="check">
 <summary>Show Solution</summary>
 <p>Factor out <span class="arithmatex">\(x\)</span>:
-$<span class="arithmatex">\(\frac{x(x+3)}{x} = x+3\)</span>$
-As <span class="arithmatex">\(x \to 0\)</span>, result is <span class="arithmatex">\(0+3 = 3\)</span>.</p>
+$<span class="arithmatex">\(x(x+3)/x = 3\)</span>$</p>
 </details>
 <hr />
-<p><em>Good luck on your journey through analysis!</em></p>
+<p><em>Good luck!</em></p>
 
 
 
