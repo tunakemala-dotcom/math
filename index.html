@@ -611,7 +611,7 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 <hr />
 <h2 id="2-function-limits-the-hole">2. Function Limits (The Hole)</h2>
 <h3 id="theory-value-vs-limit">Theory: Value vs. Limit</h3>
-<p>Limits describe the behavior of a function near a point, even if undefined (like <span class="arithmatex">\(0/0\)</span>).</p>
+<p>Limits describe behavior near a point, even if undefined (like <span class="arithmatex">\(0/0\)</span>).</p>
 <h3 id="practice-task_1">Practice Task</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div class="quiz-box" data-id="2">
@@ -620,10 +620,6 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
     <p id="msg2" class="quiz-msg"></p>
 </div>
 
-<details class="quote">
-<summary>Show Solution</summary>
-<p>Factor: <span class="arithmatex">\((x-1)(x+1)\)</span>. Result: <span class="arithmatex">\(2\)</span>.</p>
-</details>
 <hr />
 <h2 id="final-test">Final Test</h2>
 <h3 id="task-a-multiple-choice">Task A (Multiple Choice)</h3>
@@ -667,26 +663,17 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(', '\\)']], // ARTIK SADECE PARANTEZ KULLANIYORUZ
-      displayMath: [['\\[', '\\]']], 
+      inlineMath: [['\\(', '\\)']], // Sadece parantezleri ara
+      displayMath: [['\\[', '\\]']],
       processEscapes: true
     }
   };
 
-  let totalQuestions = 5;
+  let totalQuestions = 3; 
   let solvedQuestions = new Set();
 
   function shootConfetti() {
-    var duration = 3 * 1000;
-    var animationEnd = Date.now() + duration;
-    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
-    var interval = setInterval(function() {
-      var timeLeft = animationEnd - Date.now();
-      if (timeLeft <= 0) return clearInterval(interval);
-      var particleCount = 50 * (timeLeft / duration);
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random() * 0.2 + 0.1, y: Math.random() - 0.2 } }));
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random() * 0.2 + 0.7, y: Math.random() - 0.2 } }));
-    }, 250);
+    confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
   }
 
   function updateProgress(id) {
@@ -703,8 +690,7 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
-      var userVal = input.value.trim();
-      if (userVal == correctAnswer) {
+      if (input.value.trim() == correctAnswer) {
         document.getElementById(feedbackId).innerHTML = "Correct!";
         updateProgress(input.closest('.quiz-box').getAttribute('data-id'));
       } else {
