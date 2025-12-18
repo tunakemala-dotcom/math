@@ -303,7 +303,7 @@
   <a href="#theory-what-is-a-limit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: What is a Limit?
+        Theory: What is a Limit?
       
     </span>
   </a>
@@ -314,7 +314,7 @@
   <a href="#solved-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -325,7 +325,7 @@
   <a href="#practice-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -353,7 +353,7 @@
   <a href="#theory-value-vs-limit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: Value vs. Limit
+        Theory: Value vs. Limit
       
     </span>
   </a>
@@ -364,7 +364,7 @@
   <a href="#solved-example_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -375,7 +375,7 @@
   <a href="#practice-task_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -403,7 +403,7 @@
   <a href="#theory-the-00-mystery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: The 0/0 Mystery
+        Theory: The 0/0 Mystery
       
     </span>
   </a>
@@ -414,7 +414,7 @@
   <a href="#solved-example_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -425,7 +425,7 @@
   <a href="#practice-task_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -526,7 +526,7 @@
   <a href="#theory-what-is-a-limit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: What is a Limit?
+        Theory: What is a Limit?
       
     </span>
   </a>
@@ -537,7 +537,7 @@
   <a href="#solved-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -548,7 +548,7 @@
   <a href="#practice-task" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -576,7 +576,7 @@
   <a href="#theory-value-vs-limit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: Value vs. Limit
+        Theory: Value vs. Limit
       
     </span>
   </a>
@@ -587,7 +587,7 @@
   <a href="#solved-example_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -598,7 +598,7 @@
   <a href="#practice-task_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -626,7 +626,7 @@
   <a href="#theory-the-00-mystery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Theory: The 0/0 Mystery
+        Theory: The 0/0 Mystery
       
     </span>
   </a>
@@ -637,7 +637,7 @@
   <a href="#solved-example_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️‍🗨️ Solved Example
+        Solved Example
       
     </span>
   </a>
@@ -648,7 +648,7 @@
   <a href="#practice-task_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Practice Task
+        Practice Task
       
     </span>
   </a>
@@ -717,29 +717,24 @@
 
 
 <h1 id="calculus-interactive-guide">Calculus Interactive Guide</h1>
-<div style="background: var(--md-code-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--md-default-fg-color--lightest); margin-bottom: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-  <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: bold; color: var(--md-text-color);">
-    <span>🚀 Course Progress</span>
-    <span id="progress-text" style="color: var(--md-primary-fg-color);">0%</span>
-  </div>
-  <div style="width: 100%; background: var(--md-default-fg-color--lightest); height: 10px; border-radius: 5px; overflow: hidden;">
-    <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); transition: width 0.5s ease;"></div>
-  </div>
+<div id="vertical-progress-container">
+    <div id="progress-fill"></div>
+    <div id="progress-percent">0%</div>
 </div>
 
 <p><strong>Instructions:</strong> Read the theory, check the solved example, then solve the practice question.</p>
 <hr />
 <h2 id="1-sequence-limits">1. Sequence Limits</h2>
-<h3 id="theory-what-is-a-limit">📘 Theory: What is a Limit?</h3>
+<h3 id="theory-what-is-a-limit">Theory: What is a Limit?</h3>
 <p>A sequence <span class="arithmatex">\(a_n\)</span> approaches a limit <span class="arithmatex">\(L\)</span> if the terms get infinitely close to <span class="arithmatex">\(L\)</span> as <span class="arithmatex">\(n \to \infty\)</span>. Think of it as the "destination" of the numbers.</p>
-<h3 id="solved-example">👁️‍🗨️ Solved Example</h3>
+<h3 id="solved-example">Solved Example</h3>
 <p><strong>Question:</strong> Find <span class="arithmatex">\(\lim_{n \to \infty} \frac{2n + 1}{n}\)</span></p>
 <p><strong>Solution:</strong>
 Divide every term by <span class="arithmatex">\(n\)</span>:
 $<span class="arithmatex">\(\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n}\)</span>$
 As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(\frac{1}{n}\)</span> becomes <span class="arithmatex">\(0\)</span>.
 <strong>Result:</strong> <span class="arithmatex">\(2 + 0 = 2\)</span>.</p>
-<h3 id="practice-task">🚀 Practice Task</h3>
+<h3 id="practice-task">Practice Task</h3>
 <p>Find limit of <span class="arithmatex">\(a_n = \frac{n+1}{n}\)</span>.</p>
 <div class="quiz-box" data-id="1">
     <p class="q-title">Answer:</p>
@@ -747,7 +742,7 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
     <p id="msg1" class="quiz-msg"></p>
 
     <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
-        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <summary style="cursor: pointer;">Need a Hint?</summary>
         <p style="margin-top: 5px; color: var(--md-text-color);">Try dividing both the numerator and denominator by $n$.</p>
     </details>
 </div>
@@ -759,16 +754,16 @@ $<span class="arithmatex">\(\lim_{n \to \infty} (1 + 1/n) = 1\)</span>$</p>
 </details>
 <hr />
 <h2 id="2-function-limits-the-hole">2. Function Limits (The Hole)</h2>
-<h3 id="theory-value-vs-limit">📘 Theory: Value vs. Limit</h3>
+<h3 id="theory-value-vs-limit">Theory: Value vs. Limit</h3>
 <p>Limits describe the behavior of a function <em>near</em> a point, not necessarily <em>at</em> the point. This allows us to handle "undefined" points like <span class="arithmatex">\(0/0\)</span>.</p>
-<h3 id="solved-example_1">👁️‍🗨️ Solved Example</h3>
+<h3 id="solved-example_1">Solved Example</h3>
 <p><strong>Question:</strong> Find <span class="arithmatex">\(\lim_{x \to 3} \frac{x^2 - 9}{x - 3}\)</span>.</p>
 <p><strong>Solution:</strong>
 If we plug in <span class="arithmatex">\(3\)</span>, we get <span class="arithmatex">\(0/0\)</span>.
 Factor the numerator (Difference of Squares):
 $<span class="arithmatex">\(\frac{(x-3)(x+3)}{x-3} = x+3\)</span>$
 Now plug in <span class="arithmatex">\(3\)</span>: <span class="arithmatex">\(3+3=6\)</span>.</p>
-<h3 id="practice-task_1">🚀 Practice Task</h3>
+<h3 id="practice-task_1">Practice Task</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div class="quiz-box" data-id="2">
     <p class="q-title">Answer:</p>
@@ -776,7 +771,7 @@ Now plug in <span class="arithmatex">\(3\)</span>: <span class="arithmatex">\(3+
     <p id="msg2" class="quiz-msg"></p>
 
     <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
-        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <summary style="cursor: pointer;">Need a Hint?</summary>
         <p style="margin-top: 5px; color: var(--md-text-color);">Use the difference of squares formula: $a^2 - b^2 = (a-b)(a+b)$.</p>
     </details>
 </div>
@@ -787,15 +782,15 @@ Now plug in <span class="arithmatex">\(3\)</span>: <span class="arithmatex">\(3+
 </details>
 <hr />
 <h2 id="3-indeterminate-forms">3. Indeterminate Forms</h2>
-<h3 id="theory-the-00-mystery">📘 Theory: The 0/0 Mystery</h3>
+<h3 id="theory-the-00-mystery">Theory: The 0/0 Mystery</h3>
 <p>When you see <span class="arithmatex">\(0/0\)</span>, it is an <strong>Indeterminate Form</strong>. It means "do more work" (usually algebra) to find the hidden answer.</p>
-<h3 id="solved-example_2">👁️‍🗨️ Solved Example</h3>
+<h3 id="solved-example_2">Solved Example</h3>
 <p><strong>Question:</strong> Find <span class="arithmatex">\(\lim_{x \to 0} \frac{5x^2 + 10x}{x}\)</span>.</p>
 <p><strong>Solution:</strong>
 Factor out <span class="arithmatex">\(x\)</span> from the top:
 $<span class="arithmatex">\(\frac{x(5x + 10)}{x} = 5x + 10\)</span>$
 Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arithmatex">\(10\)</span>.</p>
-<h3 id="practice-task_2">🚀 Practice Task</h3>
+<h3 id="practice-task_2">Practice Task</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{2x^2 - 2}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div class="quiz-box" data-id="3">
     <p class="q-title">Answer:</p>
@@ -803,7 +798,7 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     <p id="msg3" class="quiz-msg"></p>
 
     <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
-        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <summary style="cursor: pointer;">Need a Hint?</summary>
         <p style="margin-top: 5px; color: var(--md-text-color);">Factor out 2 first: $2(x^2 - 1)$.</p>
     </details>
 </div>
@@ -842,10 +837,10 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
 <p>Simplify: <span class="arithmatex">\(x+3 \to 3\)</span>.</p>
 </details>
 <hr />
-<div id="cheat-sheet-btn" onclick="toggleCheatSheet()">⚡ Formulas</div>
+<div id="cheat-sheet-btn" onclick="toggleCheatSheet()">Formulas</div>
 
 <div id="cheat-sheet-panel">
-    <h3 style="margin-top:0; border-bottom: 2px solid var(--md-primary-fg-color); padding-bottom: 10px;">⚡ Cheat Sheet</h3>
+    <h3 style="margin-top:0; border-bottom: 2px solid var(--md-primary-fg-color); padding-bottom: 10px;">Cheat Sheet</h3>
     <p><b>Difference of Squares:</b><br>$a^2 - b^2 = (a-b)(a+b)$</p>
     <p><b>Limits at Infinity:</b><br>$\frac{n^k}{n^k} \to 1$, $\frac{1}{n} \to 0$</p>
     <p><b>Common Limit:</b><br>$\lim_{x \to 0} \frac{\sin x}{x} = 1$</p>
@@ -853,6 +848,48 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
 </div>
 
 <style>
+  /* 1. DİKEY İLERLEME ÇUBUĞU STİLLERİ */
+  #vertical-progress-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 60vh; /* Ekranın %60'ı kadar yükseklik */
+    background: var(--md-default-fg-color--lightest);
+    border-radius: 0 6px 6px 0;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column-reverse; /* Aşağıdan yukarı dolması için */
+    overflow: hidden;
+  }
+
+  #progress-fill {
+    width: 100%;
+    height: 0%; /* JS ile artacak */
+    background: var(--md-primary-fg-color);
+    transition: height 0.6s ease;
+  }
+
+  #progress-percent {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--md-primary-fg-color);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  /* Hover yapınca yüzdeyi net göster */
+  #vertical-progress-container:hover #progress-percent {
+    opacity: 1;
+  }
+
   /* Kutu Stilleri */
   .quiz-box {
     background: var(--md-code-bg);
@@ -905,7 +942,7 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
   #cheat-sheet-panel {
     position: fixed;
     top: 50%;
-    right: -320px; /* Gizli */
+    right: -320px;
     transform: translateY(-50%);
     width: 280px;
     background: var(--md-default-bg);
@@ -933,19 +970,21 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     }
   };
 
-  // İLERLEME MANTIĞI
+  // İLERLEME MANTIĞI (DİKEY BAR GÜNCELLEME)
   let totalQuestions = 5;
   let solvedQuestions = new Set();
 
   function updateProgress(id) {
     solvedQuestions.add(id);
     let percent = Math.round((solvedQuestions.size / totalQuestions) * 100);
-    document.getElementById('progress-bar').style.width = percent + "%";
-    document.getElementById('progress-text').innerText = percent + "%";
+
+    // Yüksekliği değiştir (Dikey dolum)
+    document.getElementById('progress-fill').style.height = percent + "%";
+    document.getElementById('progress-percent').innerText = percent + "%";
 
     if (percent === 100) {
-      document.getElementById('progress-text').innerText = "🎉 COMPLETED!";
-      document.getElementById('progress-bar').style.background = "#ffd700";
+      document.getElementById('progress-percent').innerText = "100%";
+      document.getElementById('progress-fill').style.background = "#ffd700"; // Altın rengi
     }
   }
 
@@ -959,11 +998,11 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
       var qId = container.getAttribute('data-id');
 
       if (userVal == correctAnswer) {
-        feedback.innerHTML = "✅ Correct!";
+        feedback.innerHTML = "Correct!";
         feedback.style.color = "var(--md-primary-fg-color)";
         updateProgress(qId);
       } else {
-        feedback.innerHTML = "❌ Try again or use the Hint 💡";
+        feedback.innerHTML = "Incorrect. Try again or check Hint.";
         feedback.style.color = "#ef5350";
       }
     }
@@ -975,7 +1014,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     var container = btn.closest('.quiz-box');
     var qId = container.getAttribute('data-id');
 
-    // Renkleri sıfırla
     var buttons = container.querySelectorAll('button');
     buttons.forEach(b => {
         b.style.background = "var(--md-default-bg)";
@@ -983,15 +1021,15 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     });
 
     if (isCorrect) {
-      btn.style.background = "#4caf50"; // Yeşil
+      btn.style.background = "#4caf50";
       btn.style.color = "white";
-      feedback.innerHTML = "✅ Correct!";
+      feedback.innerHTML = "Correct!";
       feedback.style.color = "var(--md-primary-fg-color)";
       updateProgress(qId);
     } else {
-      btn.style.background = "#ef5350"; // Kırmızı
+      btn.style.background = "#ef5350";
       btn.style.color = "white";
-      feedback.innerHTML = "❌ Incorrect.";
+      feedback.innerHTML = "Incorrect.";
       feedback.style.color = "#ef5350";
     }
   }
