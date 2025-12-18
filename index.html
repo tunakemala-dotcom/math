@@ -361,7 +361,57 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#solved-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solved Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#practice-task_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-indeterminate-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Indeterminate Forms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Indeterminate Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theory-the-00-mystery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theory: The 0/0 Mystery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-task_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Practice Task
@@ -512,7 +562,57 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#solved-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solved Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#practice-task_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-indeterminate-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Indeterminate Forms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Indeterminate Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theory-the-00-mystery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theory: The 0/0 Mystery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-task_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Practice Task
@@ -587,7 +687,7 @@
 <p><strong>Question:</strong> Find <span class="arithmatex">\(\lim_{n \to \infty} \frac{2n + 1}{n}\)</span></p>
 <p><strong>Solution:</strong>
 Divide every term by <span class="arithmatex">\(n\)</span>:
-[\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n}]
+$<span class="arithmatex">\(\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n}\)</span>$
 As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(\frac{1}{n}\)</span> becomes <span class="arithmatex">\(0\)</span>.
 <strong>Result:</strong> <span class="arithmatex">\(2 + 0 = 2\)</span>.</p>
 <h3 id="practice-task">Practice Task</h3>
@@ -599,25 +699,48 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 
     <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
         <summary style="cursor: pointer;">Need a Hint?</summary>
-        <p style="margin-top: 5px; color: var(--md-text-color);">Try dividing both the numerator and denominator by \(n\).</p>
+        <p style="margin-top: 5px; color: var(--md-text-color);">Try dividing both the numerator and denominator by $n$.</p>
     </details>
 </div>
 
 <details class="quote">
 <summary>Show Solution</summary>
 <p>Divide by <span class="arithmatex">\(n\)</span>:
-[\lim_{n \to \infty} (1 + 1/n) = 1]</p>
+$<span class="arithmatex">\(\lim_{n \to \infty} \left( 1 + \frac{1}{n} \right) = 1\)</span>$</p>
 </details>
 <hr />
 <h2 id="2-function-limits-the-hole">2. Function Limits (The Hole)</h2>
 <h3 id="theory-value-vs-limit">Theory: Value vs. Limit</h3>
-<p>Limits describe behavior near a point, even if undefined (like <span class="arithmatex">\(0/0\)</span>).</p>
+<p>Limits describe the behavior of a function <em>near</em> a point, not necessarily <em>at</em> the point. This allows us to handle "undefined" points like <span class="arithmatex">\(0/0\)</span>.</p>
+<h3 id="solved-example_1">Solved Example</h3>
+<p><strong>Question:</strong> Find <span class="arithmatex">\(\lim_{x \to 3} \frac{x^2 - 9}{x - 3}\)</span>.</p>
+<p><strong>Solution:</strong>
+If we plug in <span class="arithmatex">\(3\)</span>, we get <span class="arithmatex">\(0/0\)</span>.
+Factor the numerator (Difference of Squares):
+$<span class="arithmatex">\(\frac{(x-3)(x+3)}{x-3} = x+3\)</span>$
+Now plug in <span class="arithmatex">\(3\)</span>: <span class="arithmatex">\(3+3=6\)</span>.</p>
 <h3 id="practice-task_1">Practice Task</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
 <div class="quiz-box" data-id="2">
     <p class="q-title">Answer:</p>
     <input type="text" id="ans2" placeholder="Type & Enter..." onkeypress="checkEnter(event, 'ans2', '2', 'msg2')" class="quiz-input">
     <p id="msg2" class="quiz-msg"></p>
+</div>
+
+<details class="quote">
+<summary>Show Solution</summary>
+<p>Factor: <span class="arithmatex">\((x-1)(x+1)\)</span>. Result: <span class="arithmatex">\(2\)</span>.</p>
+</details>
+<hr />
+<h2 id="3-indeterminate-forms">3. Indeterminate Forms</h2>
+<h3 id="theory-the-00-mystery">Theory: The 0/0 Mystery</h3>
+<p>When you see <span class="arithmatex">\(0/0\)</span>, it is an <strong>Indeterminate Form</strong>. It means "do more work" (usually algebra) to find the hidden answer.</p>
+<h3 id="practice-task_2">Practice Task</h3>
+<p>Find limit of <span class="arithmatex">\(f(x) = \frac{2x^2 - 2}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
+<div class="quiz-box" data-id="3">
+    <p class="q-title">Answer:</p>
+    <input type="text" id="ans3" placeholder="Type & Enter..." onkeypress="checkEnter(event, 'ans3', '4', 'msg3')" class="quiz-input">
+    <p id="msg3" class="quiz-msg"></p>
 </div>
 
 <hr />
@@ -630,7 +753,7 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
         <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">0</button>
         <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">1</button>
         <button onclick="checkMCQ(this, true, 'msg4')" class="mcq-btn">3</button>
-        <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">\(\infty\)</button>
+        <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">$\infty$</button>
     </div>
     <p id="msg4" class="quiz-msg"></p>
 </div>
@@ -640,13 +763,17 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 
 <div id="cheat-sheet-panel">
     <h3 style="margin-top:0; border-bottom: 2px solid var(--md-primary-fg-color); padding-bottom: 10px;">Cheat Sheet</h3>
-    <p><b>Difference of Squares:</b><br>\(a^2 - b^2 = (a-b)(a+b)\)</p>
-    <p><b>Limits at Infinity:</b><br>\(\frac{n^k}{n^k} \to 1\), \(\frac{1}{n} \to 0\)</p>
+    <p><b>Difference of Squares:</b><br>$a^2 - b^2 = (a-b)(a+b)$</p>
+    <p><b>Limits at Infinity:</b><br>$\frac{n^k}{n^k} \to 1$, $\frac{1}{n} \to 0$</p>
     <button onclick="toggleCheatSheet()" style="margin-top: 20px; width: 100%; padding: 8px; cursor: pointer; background: var(--md-default-fg-color--lightest); border: none; border-radius: 4px;">Close Panel</button>
 </div>
 
 <style>
-  #vertical-progress-container { position: fixed; left: 0; top: 50%; transform: translateY(-50%); width: 12px; height: 60vh; background: var(--md-default-fg-color--lightest); border-radius: 0 6px 6px 0; z-index: 1000; box-shadow: 2px 0 5px rgba(0,0,0,0.1); display: flex; flex-direction: column-reverse; overflow: hidden; }
+  #vertical-progress-container {
+    position: fixed; left: 0; top: 50%; transform: translateY(-50%); width: 12px; height: 60vh;
+    background: var(--md-default-fg-color--lightest); border-radius: 0 6px 6px 0; z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); display: flex; flex-direction: column-reverse; overflow: hidden;
+  }
   #progress-fill { width: 100%; height: 0%; background: var(--md-primary-fg-color); transition: height 0.6s ease; }
   #progress-percent { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-weight: bold; font-size: 14px; color: var(--md-primary-fg-color); opacity: 0.5; pointer-events: none; }
   #vertical-progress-container:hover #progress-percent { opacity: 1; }
@@ -663,13 +790,30 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(', '\\)']], // Sadece parantezleri ara
-      displayMath: [['\\[', '\\]']],
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    startup: {
+      ready: () => {
+        MathJax.startup.defaultReady();
+        document.querySelectorAll('details').forEach(el => {
+          el.addEventListener('toggle', () => {
+            MathJax.typesetPromise();
+          });
+        });
+      }
     }
   };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  let totalQuestions = 3; 
+<script>
+  let totalQuestions = 5;
   let solvedQuestions = new Set();
 
   function shootConfetti() {
@@ -712,7 +856,6 @@ As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(
 
   function toggleCheatSheet() { document.getElementById('cheat-sheet-panel').classList.toggle('open'); }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 
