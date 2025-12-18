@@ -338,15 +338,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-function-limits" class="md-nav__link">
+  <a href="#2-function-limits-the-hole" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Function Limits
+        2. Function Limits (The Hole)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Function Limits">
+    <nav class="md-nav" aria-label="2. Function Limits (The Hole)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -354,17 +354,6 @@
     <span class="md-ellipsis">
       
         Definition
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
       
     </span>
   </a>
@@ -400,28 +389,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definition
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#practice_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -450,10 +417,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#task-a" class="md-nav__link">
+  <a href="#task-a-multiple-choice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task A
+        Task A (Multiple Choice)
       
     </span>
   </a>
@@ -561,15 +528,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-function-limits" class="md-nav__link">
+  <a href="#2-function-limits-the-hole" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Function Limits
+        2. Function Limits (The Hole)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Function Limits">
+    <nav class="md-nav" aria-label="2. Function Limits (The Hole)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -577,17 +544,6 @@
     <span class="md-ellipsis">
       
         Definition
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
       
     </span>
   </a>
@@ -623,28 +579,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definition
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#practice_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -673,10 +607,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#task-a" class="md-nav__link">
+  <a href="#task-a-multiple-choice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task A
+        Task A (Multiple Choice)
       
     </span>
   </a>
@@ -717,23 +651,42 @@
 
 
 <h1 id="calculus-interactive-guide">Calculus Interactive Guide</h1>
-<p><strong>Instructions:</strong> Type your answer and press <strong>ENTER</strong>.</p>
+<div style="position: sticky; top: 0; z-index: 1000; background: var(--md-default-bg); padding: 10px 0; border-bottom: 1px solid var(--md-default-fg-color--lightest);">
+  <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; font-weight: bold;">
+    <span>Course Progress</span>
+    <span id="progress-text">0%</span>
+  </div>
+  <div style="width: 100%; background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden;">
+    <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #4caf50, #8bc34a); transition: width 0.5s ease;"></div>
+  </div>
+</div>
+
+<p><strong>Instructions:</strong> Type your answer or select the correct option.</p>
 <hr />
 <h2 id="1-sequence-limits">1. Sequence Limits</h2>
 <h3 id="definition">Definition</h3>
 <p>A sequence <span class="arithmatex">\(a_n\)</span> approaches a limit <span class="arithmatex">\(L\)</span> if the terms get infinitely close to <span class="arithmatex">\(L\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
+<div style="background: white; padding: 10px; border-radius: 8px; border: 1px solid #ddd; margin: 20px 0;">
+    <p style="text-align: center; font-weight: bold; margin-bottom: 10px; color: #333;">📈 Interactive Graph: See the Limit!</p>
+    <iframe src="https://www.desmos.com/calculator/5knl5t9i1h?embed" width="100%" height="300px" style="border: 1px solid #ccc; border-radius: 4px" frameborder=0></iframe>
+    <p style="font-size: 0.8em; text-align: center; color: #666;">(Move the slider 'n' to see the points approach y=1)</p>
+</div>
+
 <h3 id="example">Example</h3>
 <p><strong>Find:</strong> <span class="arithmatex">\(\lim_{n \to \infty} \frac{2n + 1}{n}\)</span></p>
 <p><strong>Solution:</strong>
 $<span class="arithmatex">\(\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n} \implies 2 + 0 = 2\)</span>$</p>
 <h3 id="practice">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(a_n = \frac{n+1}{n}\)</span>.</p>
-<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
-    <input type="text" id="ans1" placeholder="Type & Enter..." 
-           onkeypress="checkEnter(event, 'ans1', '1', 'msg1')" 
-           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
-    <p id="msg1" style="margin-top: 8px; font-size: 0.9rem;"></p>
+<div class="quiz-box" data-id="1">
+    <p class="q-title">Answer:</p>
+    <input type="text" id="ans1" placeholder="Type & Enter..." onkeypress="checkEnter(event, 'ans1', '1', 'msg1')" class="quiz-input">
+    <p id="msg1" class="quiz-msg"></p>
+
+    <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
+        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <p style="margin-top: 5px; color: var(--md-text-color);">Try dividing both the numerator and denominator by $n$.</p>
+    </details>
 </div>
 
 <details class="quote">
@@ -742,22 +695,20 @@ $<span class="arithmatex">\(\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n} \implie
 $<span class="arithmatex">\(\lim_{n \to \infty} (1 + 1/n) = 1\)</span>$</p>
 </details>
 <hr />
-<h2 id="2-function-limits">2. Function Limits</h2>
+<h2 id="2-function-limits-the-hole">2. Function Limits (The Hole)</h2>
 <h3 id="definition_1">Definition</h3>
-<p>Limits describe the behavior of a function near a point, even if the point itself is undefined (like <span class="arithmatex">\(0/0\)</span>).</p>
-<h3 id="example_1">Example</h3>
-<p><strong>Find:</strong> <span class="arithmatex">\(\lim_{x \to 3} \frac{x^2 - 9}{x - 3}\)</span></p>
-<p><strong>Solution:</strong>
-Factorize: <span class="arithmatex">\(\frac{(x-3)(x+3)}{x-3} = x+3\)</span>.
-Result: <span class="arithmatex">\(3+3=6\)</span>.</p>
+<p>Limits describe behavior near a point, even if undefined (like <span class="arithmatex">\(0/0\)</span>).</p>
 <h3 id="practice_1">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
-<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
-    <input type="text" id="ans2" placeholder="Type & Enter..." 
-           onkeypress="checkEnter(event, 'ans2', '2', 'msg2')" 
-           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
-    <p id="msg2" style="margin-top: 8px; font-size: 0.9rem;"></p>
+<div class="quiz-box" data-id="2">
+    <p class="q-title">Answer:</p>
+    <input type="text" id="ans2" placeholder="Type & Enter..." onkeypress="checkEnter(event, 'ans2', '2', 'msg2')" class="quiz-input">
+    <p id="msg2" class="quiz-msg"></p>
+
+    <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
+        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <p style="margin-top: 5px; color: var(--md-text-color);">Use the difference of squares formula: $a^2 - b^2 = (a-b)(a+b)$.</p>
+    </details>
 </div>
 
 <details class="quote">
@@ -766,21 +717,17 @@ Result: <span class="arithmatex">\(3+3=6\)</span>.</p>
 </details>
 <hr />
 <h2 id="3-indeterminate-forms">3. Indeterminate Forms</h2>
-<h3 id="definition_2">Definition</h3>
-<p>The form <span class="arithmatex">\(0/0\)</span> requires algebraic manipulation (factoring, conjugate, L'Hopital) to resolve.</p>
-<h3 id="example_2">Example</h3>
-<p><strong>Find:</strong> <span class="arithmatex">\(\lim_{x \to 0} \frac{5x^2 + 10x}{x}\)</span></p>
-<p><strong>Solution:</strong>
-Factor <span class="arithmatex">\(x\)</span>: <span class="arithmatex">\(\frac{x(5x+10)}{x} = 5x+10\)</span>.
-Result: <span class="arithmatex">\(10\)</span>.</p>
 <h3 id="practice_2">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{2x^2 - 2}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
-<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
-    <input type="text" id="ans3" placeholder="Type & Enter..." 
-           onkeypress="checkEnter(event, 'ans3', '4', 'msg3')" 
-           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
-    <p id="msg3" style="margin-top: 8px; font-size: 0.9rem;"></p>
+<div class="quiz-box" data-id="3">
+    <p class="q-title">Answer:</p>
+    <input type="text" id="ans3" placeholder="Type & Enter..." onkeypress="checkEnter(event, 'ans3', '4', 'msg3')" class="quiz-input">
+    <p id="msg3" class="quiz-msg"></p>
+
+    <details style="margin-top: 10px; font-size: 0.9em; color: var(--md-primary-fg-color);">
+        <summary style="cursor: pointer;">💡 Need a Hint?</summary>
+        <p style="margin-top: 5px; color: var(--md-text-color);">Factor out 2 first: $2(x^2 - 1)$.</p>
+    </details>
 </div>
 
 <details class="quote">
@@ -789,26 +736,27 @@ Result: <span class="arithmatex">\(10\)</span>.</p>
 </details>
 <hr />
 <h2 id="final-test">Final Test</h2>
-<h3 id="task-a">Task A</h3>
-<p>Limit of <span class="arithmatex">\(a_n = \frac{3n}{n+2}\)</span>.</p>
-<div style="background: var(--md-code-bg); padding: 15px; border-left: 3px solid var(--md-primary-fg-color); border-radius: 0 4px 4px 0;">
-    <input type="text" id="ans4" placeholder="Answer..." 
-           onkeypress="checkEnter(event, 'ans4', '3', 'msg4')" 
-           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
-    <p id="msg4" style="margin-top: 8px;"></p>
+<h3 id="task-a-multiple-choice">Task A (Multiple Choice)</h3>
+<p>Limit of <span class="arithmatex">\(a_n = \frac{3n^2 + n}{n^2 - 5}\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
+<div class="quiz-box" data-id="4" style="border-left: 3px solid var(--md-accent-fg-color);">
+    <p class="q-title">Select the correct answer:</p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">0</button>
+        <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">1</button>
+        <button onclick="checkMCQ(this, true, 'msg4')" class="mcq-btn">3</button> <button onclick="checkMCQ(this, false, 'msg4')" class="mcq-btn">$\infty$</button>
+    </div>
+    <p id="msg4" class="quiz-msg"></p>
 </div>
 
 <details class="quote">
 <summary>Solution</summary>
-<p>Highest power coeff: <span class="arithmatex">\(3\)</span>.</p>
+<p>Ratio of highest powers: <span class="arithmatex">\(3n^2 / n^2 = 3\)</span>.</p>
 </details>
 <h3 id="task-b">Task B</h3>
 <p>Limit of <span class="arithmatex">\(f(x) = \frac{x^2 + 3x}{x}\)</span> as <span class="arithmatex">\(x \to 0\)</span>.</p>
-<div style="background: var(--md-code-bg); padding: 15px; border-left: 3px solid var(--md-primary-fg-color); border-radius: 0 4px 4px 0;">
-    <input type="text" id="ans5" placeholder="Answer..." 
-           onkeypress="checkEnter(event, 'ans5', '3', 'msg5')" 
-           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
-    <p id="msg5" style="margin-top: 8px;"></p>
+<div class="quiz-box" data-id="5" style="border-left: 3px solid var(--md-accent-fg-color);">
+    <input type="text" id="ans5" placeholder="Answer..." onkeypress="checkEnter(event, 'ans5', '3', 'msg5')" class="quiz-input">
+    <p id="msg5" class="quiz-msg"></p>
 </div>
 
 <details class="quote">
@@ -816,51 +764,164 @@ Result: <span class="arithmatex">\(10\)</span>.</p>
 <p>Simplify: <span class="arithmatex">\(x+3 \to 3\)</span>.</p>
 </details>
 <hr />
+<div id="cheat-sheet-btn" onclick="toggleCheatSheet()">⚡ Formulas</div>
+
+<div id="cheat-sheet-panel">
+    <h3 style="margin-top:0">⚡ Quick Formulas</h3>
+    <hr>
+    <p><b>Difference of Squares:</b><br>$a^2 - b^2 = (a-b)(a+b)$</p>
+    <p><b>Limits at Infinity:</b><br>$\frac{n^k}{n^k} \to 1$, $\frac{1}{n} \to 0$</p>
+    <p><b>Common Limit:</b><br>$\lim_{x \to 0} \frac{\sin x}{x} = 1$</p>
+    <button onclick="toggleCheatSheet()" style="margin-top: 20px; width: 100%; padding: 5px; cursor: pointer;">Close</button>
+</div>
+
+<style>
+  /* Genel Kutu Stilleri */
+  .quiz-box {
+    background: var(--md-code-bg);
+    padding: 15px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+  .q-title { margin: 0 0 10px 0; font-weight: 500; }
+  .quiz-input {
+    background: var(--md-default-bg);
+    color: var(--md-text-color);
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 4px;
+  }
+  .quiz-msg { margin-top: 8px; font-size: 0.9rem; font-weight: bold; min-height: 20px;}
+
+  /* Çoktan Seçmeli Butonlar */
+  .mcq-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--md-primary-fg-color);
+    background: var(--md-default-bg);
+    color: var(--md-text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mcq-btn:hover { background: var(--md-primary-fg-color--light); }
+
+  /* Cheat Sheet (Formül Kağıdı) */
+  #cheat-sheet-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--md-primary-fg-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-weight: bold;
+    z-index: 2000;
+  }
+  #cheat-sheet-panel {
+    position: fixed;
+    top: 50%;
+    right: -300px; /* Başlangıçta gizli */
+    transform: translateY(-50%);
+    width: 250px;
+    background: var(--md-default-bg);
+    border: 2px solid var(--md-primary-fg-color);
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 2001;
+  }
+  #cheat-sheet-panel.open { right: 0; }
+</style>
+
 <script>
+  // MATHJAX AYARLARI
   window.MathJax = {
-    tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    },
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
     startup: {
       ready: () => {
         MathJax.startup.defaultReady();
         document.querySelectorAll('details').forEach(el => {
-          el.addEventListener('toggle', () => {
-            MathJax.typesetPromise();
-          });
+          el.addEventListener('toggle', () => { MathJax.typesetPromise(); });
         });
       }
     }
   };
 
+  // İLERLEME SİSTEMİ (Gamification)
+  let totalQuestions = 5;
+  let solvedQuestions = new Set(); // Doğru bilinenleri saklar
+
+  function updateProgress(id) {
+    solvedQuestions.add(id);
+    let percent = Math.round((solvedQuestions.size / totalQuestions) * 100);
+    document.getElementById('progress-bar').style.width = percent + "%";
+    document.getElementById('progress-text').innerText = percent + "% Completed";
+
+    if (percent === 100) {
+      document.getElementById('progress-text').innerText = "🎉 100% COMPLETED! 🎉";
+      document.getElementById('progress-bar').style.background = "#ffd700"; // Altın rengi
+    }
+  }
+
+  // TEXT INPUT KONTROLÜ
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
       var feedback = document.getElementById(feedbackId);
       var userVal = input.value.trim();
-      var container = input.parentElement;
-      var solutionDetails = container.nextElementSibling;
+      var container = input.closest('.quiz-box');
+      var qId = container.getAttribute('data-id');
 
       if (userVal == correctAnswer) {
-        feedback.innerHTML = "Correct ✓";
-        feedback.style.color = "var(--md-primary-fg-color)"; // Temaya uygun renk
-        feedback.style.fontWeight = "bold";
+        feedback.innerHTML = "✅ Correct!";
+        feedback.style.color = "var(--md-primary-fg-color)";
+        updateProgress(qId); // İlerlemeyi güncelle
       } else {
-        feedback.innerHTML = "Incorrect. See solution below.";
-        feedback.style.color = "#ef5350"; // Kırmızı
-        if (solutionDetails && solutionDetails.tagName === 'DETAILS') {
-          solutionDetails.open = true;
-          setTimeout(() => { if(window.MathJax) MathJax.typesetPromise(); }, 100);
+        feedback.innerHTML = "❌ Try again or use the Hint 💡";
+        feedback.style.color = "#ef5350";
+        // Yanlış yapınca Çözüm kutusunu (DETAILS) bul ve aç
+        var solutionDetails = container.nextElementSibling;
+        if (solutionDetails && solutionDetails.tagName === 'DETAILS' && solutionDetails.className === '') {
+            // Burası ipucu değil, ana çözüm ise açma opsiyonel
+            // solutionDetails.open = true; 
         }
       }
     }
+  }
+
+  // ÇOKTAN SEÇMELİ KONTROLÜ (MCQ)
+  function checkMCQ(btn, isCorrect, feedbackId) {
+    var feedback = document.getElementById(feedbackId);
+    var container = btn.closest('.quiz-box');
+    var qId = container.getAttribute('data-id');
+
+    // Önceki renkleri temizle
+    var buttons = container.querySelectorAll('button');
+    buttons.forEach(b => b.style.background = "var(--md-default-bg)");
+
+    if (isCorrect) {
+      btn.style.background = "#a5d6a7"; // Yeşilimsi
+      feedback.innerHTML = "✅ Correct!";
+      feedback.style.color = "var(--md-primary-fg-color)";
+      updateProgress(qId);
+    } else {
+      btn.style.background = "#ef9a9a"; // Kırmızımsı
+      feedback.innerHTML = "❌ Incorrect.";
+      feedback.style.color = "#ef5350";
+    }
+  }
+
+  // FORMÜL KAĞIDI AÇ/KAPA
+  function toggleCheatSheet() {
+    document.getElementById('cheat-sheet-panel').classList.toggle('open');
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
