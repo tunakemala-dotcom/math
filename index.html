@@ -802,21 +802,17 @@ $<span class="arithmatex">\(\frac{x(x+3)}{x} = x+3 \rightarrow 3\)</span>$</p>
 <hr />
 <p><em>Good luck!</em></p>
 <script>
-  // 1. Math Settings
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
+      // BURASI KRITİK: Hem $ hem de \( işaretlerini kabul et diyoruz.
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
     },
     startup: {
       ready: () => {
         MathJax.startup.defaultReady();
+        // Gizli cevaplar açıldığında matematiği tekrar çiz
         document.querySelectorAll('details').forEach(el => {
           el.addEventListener('toggle', () => {
             MathJax.typesetPromise();
@@ -826,7 +822,7 @@ $<span class="arithmatex">\(\frac{x(x+3)}{x} = x+3 \rightarrow 3\)</span>$</p>
     }
   };
 
-  // 2. Quiz Logic
+  // Quiz Mantığı (Enter Tuşu)
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
