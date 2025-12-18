@@ -821,10 +821,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     <p id="msg4" class="quiz-msg"></p>
 </div>
 
-<details class="quote">
-<summary>Solution</summary>
-<p>Ratio of highest powers: <span class="arithmatex">\(3n^2 / n^2 = 3\)</span>.</p>
-</details>
 <h3 id="task-b">Task B</h3>
 <p>Limit of <span class="arithmatex">\(f(x) = \frac{x^2 + 3x}{x}\)</span> as <span class="arithmatex">\(x \to 0\)</span>.</p>
 <div class="quiz-box" data-id="5" style="border-left: 3px solid var(--md-accent-fg-color);">
@@ -832,10 +828,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     <p id="msg5" class="quiz-msg"></p>
 </div>
 
-<details class="quote">
-<summary>Solution</summary>
-<p>Simplify: <span class="arithmatex">\(x+3 \to 3\)</span>.</p>
-</details>
 <hr />
 <div id="cheat-sheet-btn" onclick="toggleCheatSheet()">Formulas</div>
 
@@ -848,7 +840,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
 </div>
 
 <style>
-  /* 1. DİKEY İLERLEME ÇUBUĞU STİLLERİ */
   #vertical-progress-container {
     position: fixed;
     left: 0;
@@ -864,99 +855,19 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     flex-direction: column-reverse;
     overflow: hidden;
   }
-
-  #progress-fill {
-    width: 100%;
-    height: 0%;
-    background: var(--md-primary-fg-color);
-    transition: height 0.6s ease;
-  }
-
-  #progress-percent {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    font-size: 14px;
-    color: var(--md-primary-fg-color);
-    opacity: 0.5;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
-
-  #vertical-progress-container:hover #progress-percent {
-    opacity: 1;
-  }
-
-  /* Kutu Stilleri */
-  .quiz-box {
-    background: var(--md-code-bg);
-    padding: 15px;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-  }
-  .q-title { margin: 0 0 10px 0; font-weight: 500; }
-  .quiz-input {
-    background: var(--md-default-bg);
-    color: var(--md-text-color);
-    padding: 10px;
-    width: 100%;
-    max-width: 250px;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 4px;
-  }
-  .quiz-msg { margin-top: 8px; font-size: 0.9rem; font-weight: bold; min-height: 20px;}
-
-  /* Butonlar */
-  .mcq-btn {
-    padding: 10px 20px;
-    border: 1px solid var(--md-primary-fg-color);
-    background: var(--md-default-bg);
-    color: var(--md-text-color);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s;
-    font-weight: bold;
-  }
-  .mcq-btn:hover { background: var(--md-primary-fg-color--light); color: white;}
-
-  /* Cheat Sheet */
-  #cheat-sheet-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--md-primary-fg-color);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    font-weight: bold;
-    z-index: 2000;
-  }
-  #cheat-sheet-panel {
-    position: fixed;
-    top: 50%;
-    right: -320px;
-    transform: translateY(-50%);
-    width: 280px;
-    background: var(--md-default-bg);
-    border: 2px solid var(--md-primary-fg-color);
-    padding: 20px;
-    border-radius: 10px 0 0 10px;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.3);
-    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2001;
-  }
+  #progress-fill { width: 100%; height: 0%; background: var(--md-primary-fg-color); transition: height 0.6s ease; }
+  #progress-percent { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-weight: bold; font-size: 14px; color: var(--md-primary-fg-color); opacity: 0.5; pointer-events: none; }
+  #vertical-progress-container:hover #progress-percent { opacity: 1; }
+  .quiz-box { background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; margin-bottom: 15px; }
+  .quiz-input { background: var(--md-default-bg); color: var(--md-text-color); padding: 10px; width: 100%; max-width: 250px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; }
+  .mcq-btn { padding: 10px 20px; border: 1px solid var(--md-primary-fg-color); background: var(--md-default-bg); color: var(--md-text-color); border-radius: 4px; cursor: pointer; font-weight: bold; }
+  .mcq-btn:hover { background: var(--md-primary-fg-color--light); color: white; }
+  #cheat-sheet-btn { position: fixed; bottom: 20px; right: 20px; background: var(--md-primary-fg-color); color: white; padding: 12px 25px; border-radius: 30px; cursor: pointer; z-index: 2000; font-weight: bold; }
+  #cheat-sheet-panel { position: fixed; top: 50%; right: -320px; transform: translateY(-50%); width: 280px; background: var(--md-default-bg); border: 2px solid var(--md-primary-fg-color); padding: 20px; border-radius: 10px 0 0 10px; transition: right 0.4s ease; z-index: 2001; }
   #cheat-sheet-panel.open { right: 0; }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
 <script>
   window.MathJax = {
     tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
@@ -973,92 +884,55 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
   let totalQuestions = 5;
   let solvedQuestions = new Set();
 
-  // KONFETİ EFEKTİ FONKSİYONU
   function shootConfetti() {
     var duration = 3 * 1000;
     var animationEnd = Date.now() + duration;
     var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
-
-    function randomInOut(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
     var interval = setInterval(function() {
       var timeLeft = animationEnd - Date.now();
-
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
-      }
-
+      if (timeLeft <= 0) return clearInterval(interval);
       var particleCount = 50 * (timeLeft / duration);
-      // Ekranın iki yanından fırlat
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.1, 0.3), y: Math.random() - 0.2 } }));
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.7, 0.9), y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random() * 0.2 + 0.1, y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random() * 0.2 + 0.7, y: Math.random() - 0.2 } }));
     }, 250);
   }
 
   function updateProgress(id) {
     solvedQuestions.add(id);
     let percent = Math.round((solvedQuestions.size / totalQuestions) * 100);
-
     document.getElementById('progress-fill').style.height = percent + "%";
     document.getElementById('progress-percent').innerText = percent + "%";
-
-    // %100 OLUNCA KONFETİ PATLAT
     if (percent === 100) {
-      document.getElementById('progress-percent').innerText = "100%";
       document.getElementById('progress-fill').style.background = "#ffd700";
-      shootConfetti(); // <--- BU FONKSİYON TETİKLENİR
+      shootConfetti();
     }
   }
 
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
-      var feedback = document.getElementById(feedbackId);
       var userVal = input.value.trim();
-      var container = input.closest('.quiz-box');
-      var qId = container.getAttribute('data-id');
-
       if (userVal == correctAnswer) {
-        feedback.innerHTML = "Correct!";
-        feedback.style.color = "var(--md-primary-fg-color)";
-        updateProgress(qId);
+        document.getElementById(feedbackId).innerHTML = "Correct!";
+        updateProgress(input.closest('.quiz-box').getAttribute('data-id'));
       } else {
-        feedback.innerHTML = "Incorrect. Try again or check Hint.";
-        feedback.style.color = "#ef5350";
+        document.getElementById(feedbackId).innerHTML = "Incorrect.";
       }
     }
   }
 
   function checkMCQ(btn, isCorrect, feedbackId) {
-    var feedback = document.getElementById(feedbackId);
-    var container = btn.closest('.quiz-box');
-    var qId = container.getAttribute('data-id');
-
-    var buttons = container.querySelectorAll('button');
-    buttons.forEach(b => {
-        b.style.background = "var(--md-default-bg)";
-        b.style.color = "var(--md-text-color)";
-    });
-
     if (isCorrect) {
       btn.style.background = "#4caf50";
-      btn.style.color = "white";
-      feedback.innerHTML = "Correct!";
-      feedback.style.color = "var(--md-primary-fg-color)";
-      updateProgress(qId);
+      document.getElementById(feedbackId).innerHTML = "Correct!";
+      updateProgress(btn.closest('.quiz-box').getAttribute('data-id'));
     } else {
       btn.style.background = "#ef5350";
-      btn.style.color = "white";
-      feedback.innerHTML = "Incorrect.";
-      feedback.style.color = "#ef5350";
+      document.getElementById(feedbackId).innerHTML = "Incorrect.";
     }
   }
 
-  function toggleCheatSheet() {
-    document.getElementById('cheat-sheet-panel').classList.toggle('open');
-  }
+  function toggleCheatSheet() { document.getElementById('cheat-sheet-panel').classList.toggle('open'); }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
