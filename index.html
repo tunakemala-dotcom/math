@@ -638,16 +638,26 @@ $<span class="arithmatex">\(x(x+3)/x = 3\)</span>$</p>
 <hr />
 <p><em>Good luck!</em></p>
 <script>
-  // 1. Matematik Ayarları ($ işaretini formüle çevirir)
+  // 1. Önce Ayarları Yap ($ işaretini tanıt)
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true
+    },
+    options: {
+      ignoreHtmlClass: ".*|",
+      processHtmlClass: "arithmatex"
     }
   };
 
-  // 2. Quiz Sistemi (Enter tuşu ile kontrol)
+  // 2. Sonra MathJax Kütüphanesini Yükle (Sıralama Garantili)
+  var script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+  script.async = true;
+  document.head.appendChild(script);
+
+  // 3. Quiz Sistemi (Enter Tuşu)
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
@@ -723,8 +733,6 @@ $<span class="arithmatex">\(x(x+3)/x = 3\)</span>$</p>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
