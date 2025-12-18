@@ -855,19 +855,19 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     top: 50%;
     transform: translateY(-50%);
     width: 12px;
-    height: 60vh; /* Ekranın %60'ı kadar yükseklik */
+    height: 60vh;
     background: var(--md-default-fg-color--lightest);
     border-radius: 0 6px 6px 0;
     z-index: 1000;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     display: flex;
-    flex-direction: column-reverse; /* Aşağıdan yukarı dolması için */
+    flex-direction: column-reverse;
     overflow: hidden;
   }
 
   #progress-fill {
     width: 100%;
-    height: 0%; /* JS ile artacak */
+    height: 0%;
     background: var(--md-primary-fg-color);
     transition: height 0.6s ease;
   }
@@ -885,7 +885,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     pointer-events: none;
   }
 
-  /* Hover yapınca yüzdeyi net göster */
   #vertical-progress-container:hover #progress-percent {
     opacity: 1;
   }
@@ -956,8 +955,9 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
   #cheat-sheet-panel.open { right: 0; }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <script>
-  // MATHJAX
   window.MathJax = {
     tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
     startup: {
@@ -970,25 +970,48 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     }
   };
 
-  // İLERLEME MANTIĞI (DİKEY BAR GÜNCELLEME)
   let totalQuestions = 5;
   let solvedQuestions = new Set();
+
+  // KONFETİ EFEKTİ FONKSİYONU
+  function shootConfetti() {
+    var duration = 3 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+    function randomInOut(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var interval = setInterval(function() {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      // Ekranın iki yanından fırlat
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.1, 0.3), y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.7, 0.9), y: Math.random() - 0.2 } }));
+    }, 250);
+  }
 
   function updateProgress(id) {
     solvedQuestions.add(id);
     let percent = Math.round((solvedQuestions.size / totalQuestions) * 100);
 
-    // Yüksekliği değiştir (Dikey dolum)
     document.getElementById('progress-fill').style.height = percent + "%";
     document.getElementById('progress-percent').innerText = percent + "%";
 
+    // %100 OLUNCA KONFETİ PATLAT
     if (percent === 100) {
       document.getElementById('progress-percent').innerText = "100%";
-      document.getElementById('progress-fill').style.background = "#ffd700"; // Altın rengi
+      document.getElementById('progress-fill').style.background = "#ffd700";
+      shootConfetti(); // <--- BU FONKSİYON TETİKLENİR
     }
   }
 
-  // NORMAL SORU KONTROLÜ
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
@@ -1008,7 +1031,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     }
   }
 
-  // TEST SORUSU KONTROLÜ
   function checkMCQ(btn, isCorrect, feedbackId) {
     var feedback = document.getElementById(feedbackId);
     var container = btn.closest('.quiz-box');
@@ -1034,7 +1056,6 @@ Now let <span class="arithmatex">\(x \to 0\)</span>: Result is <span class="arit
     }
   }
 
-  // FORMÜL MENÜSÜ
   function toggleCheatSheet() {
     document.getElementById('cheat-sheet-panel').classList.toggle('open');
   }
