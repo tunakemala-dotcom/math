@@ -25,6 +25,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -51,7 +54,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -102,6 +112,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -692,11 +728,11 @@
 $<span class="arithmatex">\(\frac{2n}{n} + \frac{1}{n} = 2 + \frac{1}{n} \implies 2 + 0 = 2\)</span>$</p>
 <h3 id="practice">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(a_n = \frac{n+1}{n}\)</span>.</p>
-<div style="background: #ffffff; padding: 15px; border: 1px solid #e0e0e0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
     <input type="text" id="ans1" placeholder="Type & Enter..." 
            onkeypress="checkEnter(event, 'ans1', '1', 'msg1')" 
-           style="padding: 8px; width: 100%; max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
     <p id="msg1" style="margin-top: 8px; font-size: 0.9rem;"></p>
 </div>
 
@@ -716,11 +752,11 @@ Factorize: <span class="arithmatex">\(\frac{(x-3)(x+3)}{x-3} = x+3\)</span>.
 Result: <span class="arithmatex">\(3+3=6\)</span>.</p>
 <h3 id="practice_1">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{x^2 - 1}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
-<div style="background: #ffffff; padding: 15px; border: 1px solid #e0e0e0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
     <input type="text" id="ans2" placeholder="Type & Enter..." 
            onkeypress="checkEnter(event, 'ans2', '2', 'msg2')" 
-           style="padding: 8px; width: 100%; max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
     <p id="msg2" style="margin-top: 8px; font-size: 0.9rem;"></p>
 </div>
 
@@ -739,11 +775,11 @@ Factor <span class="arithmatex">\(x\)</span>: <span class="arithmatex">\(\frac{x
 Result: <span class="arithmatex">\(10\)</span>.</p>
 <h3 id="practice_2">Practice</h3>
 <p>Find limit of <span class="arithmatex">\(f(x) = \frac{2x^2 - 2}{x - 1}\)</span> as <span class="arithmatex">\(x \to 1\)</span>.</p>
-<div style="background: #ffffff; padding: 15px; border: 1px solid #e0e0e0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<div style="background: var(--md-code-bg); padding: 15px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     <p style="margin: 0 0 10px 0; font-weight: 500;">Answer:</p>
     <input type="text" id="ans3" placeholder="Type & Enter..." 
            onkeypress="checkEnter(event, 'ans3', '4', 'msg3')" 
-           style="padding: 8px; width: 100%; max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
     <p id="msg3" style="margin-top: 8px; font-size: 0.9rem;"></p>
 </div>
 
@@ -755,10 +791,10 @@ Result: <span class="arithmatex">\(10\)</span>.</p>
 <h2 id="final-test">Final Test</h2>
 <h3 id="task-a">Task A</h3>
 <p>Limit of <span class="arithmatex">\(a_n = \frac{3n}{n+2}\)</span>.</p>
-<div style="background: #f9f9f9; padding: 15px; border-left: 3px solid #333; border-radius: 0 4px 4px 0;">
+<div style="background: var(--md-code-bg); padding: 15px; border-left: 3px solid var(--md-primary-fg-color); border-radius: 0 4px 4px 0;">
     <input type="text" id="ans4" placeholder="Answer..." 
            onkeypress="checkEnter(event, 'ans4', '3', 'msg4')" 
-           style="padding: 8px; width: 100%; max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
     <p id="msg4" style="margin-top: 8px;"></p>
 </div>
 
@@ -768,10 +804,10 @@ Result: <span class="arithmatex">\(10\)</span>.</p>
 </details>
 <h3 id="task-b">Task B</h3>
 <p>Limit of <span class="arithmatex">\(f(x) = \frac{x^2 + 3x}{x}\)</span> as <span class="arithmatex">\(x \to 0\)</span>.</p>
-<div style="background: #f9f9f9; padding: 15px; border-left: 3px solid #333; border-radius: 0 4px 4px 0;">
+<div style="background: var(--md-code-bg); padding: 15px; border-left: 3px solid var(--md-primary-fg-color); border-radius: 0 4px 4px 0;">
     <input type="text" id="ans5" placeholder="Answer..." 
            onkeypress="checkEnter(event, 'ans5', '3', 'msg5')" 
-           style="padding: 8px; width: 100%; max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+           style="background: var(--md-default-bg); color: var(--md-text-color); padding: 8px; width: 100%; max-width: 200px; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px;">
     <p id="msg5" style="margin-top: 8px;"></p>
 </div>
 
@@ -814,11 +850,11 @@ Result: <span class="arithmatex">\(10\)</span>.</p>
 
       if (userVal == correctAnswer) {
         feedback.innerHTML = "Correct ✓";
-        feedback.style.color = "#333";
+        feedback.style.color = "var(--md-primary-fg-color)"; // Temaya uygun renk
         feedback.style.fontWeight = "bold";
       } else {
         feedback.innerHTML = "Incorrect. See solution below.";
-        feedback.style.color = "#d32f2f";
+        feedback.style.color = "#ef5350"; // Kırmızı
         if (solutionDetails && solutionDetails.tagName === 'DETAILS') {
           solutionDetails.open = true;
           setTimeout(() => { if(window.MathJax) MathJax.typesetPromise(); }, 100);
