@@ -638,27 +638,37 @@ $<span class="arithmatex">\(x(x+3)/x = 3\)</span>$</p>
 <hr />
 <p><em>Good luck!</em></p>
 <script>
-function checkEnter(event, inputId, correctAnswer, feedbackId) {
-    if (event.key === "Enter") {
-        var input = document.getElementById(inputId);
-        var feedback = document.getElementById(feedbackId);
-        var userVal = input.value.trim();
-        var container = input.parentElement;
-        var solutionDetails = container.nextElementSibling;
-
-        if (userVal == correctAnswer) {
-            feedback.innerHTML = "✅ <b>Correct!</b> Great job.";
-            feedback.style.color = "#00c853";
-            feedback.style.fontWeight = "bold";
-        } else {
-            feedback.innerHTML = "❌ <b>Incorrect.</b> The solution has opened below 👇";
-            feedback.style.color = "#d50000";
-            if (solutionDetails && solutionDetails.tagName === 'DETAILS') {
-                solutionDetails.open = true;
-            }
-        }
+  // 1. Matematik Ayarları ($ işaretini formüle çevirir)
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
     }
-}
+  };
+
+  // 2. Quiz Sistemi (Enter tuşu ile kontrol)
+  function checkEnter(event, inputId, correctAnswer, feedbackId) {
+    if (event.key === "Enter") {
+      var input = document.getElementById(inputId);
+      var feedback = document.getElementById(feedbackId);
+      var userVal = input.value.trim();
+      var container = input.parentElement;
+      var solutionDetails = container.nextElementSibling;
+
+      if (userVal == correctAnswer) {
+        feedback.innerHTML = "✅ <b>Correct!</b> Great job.";
+        feedback.style.color = "#00c853";
+        feedback.style.fontWeight = "bold";
+      } else {
+        feedback.innerHTML = "❌ <b>Incorrect.</b> The solution has opened below 👇";
+        feedback.style.color = "#d50000";
+        if (solutionDetails && solutionDetails.tagName === 'DETAILS') {
+          solutionDetails.open = true;
+        }
+      }
+    }
+  }
 </script>
 
 
