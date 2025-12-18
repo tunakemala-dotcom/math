@@ -651,13 +651,13 @@
 
 
 <h1 id="calculus-interactive-guide">Calculus Interactive Guide</h1>
-<div style="position: sticky; top: 0; z-index: 1000; background: var(--md-default-bg); padding: 10px 0; border-bottom: 1px solid var(--md-default-fg-color--lightest);">
-  <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; font-weight: bold;">
-    <span>Course Progress</span>
-    <span id="progress-text">0%</span>
+<div style="background: var(--md-code-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--md-default-fg-color--lightest); margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: bold; color: var(--md-text-color);">
+    <span>🚀 Course Progress</span>
+    <span id="progress-text" style="color: var(--md-primary-fg-color);">0%</span>
   </div>
-  <div style="width: 100%; background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden;">
-    <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #4caf50, #8bc34a); transition: width 0.5s ease;"></div>
+  <div style="width: 100%; background: var(--md-default-fg-color--lightest); height: 10px; border-radius: 5px; overflow: hidden;">
+    <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); transition: width 0.5s ease;"></div>
   </div>
 </div>
 
@@ -666,10 +666,10 @@
 <h2 id="1-sequence-limits">1. Sequence Limits</h2>
 <h3 id="definition">Definition</h3>
 <p>A sequence <span class="arithmatex">\(a_n\)</span> approaches a limit <span class="arithmatex">\(L\)</span> if the terms get infinitely close to <span class="arithmatex">\(L\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
-<div style="background: white; padding: 10px; border-radius: 8px; border: 1px solid #ddd; margin: 20px 0;">
-    <p style="text-align: center; font-weight: bold; margin-bottom: 10px; color: #333;">📈 Interactive Graph: See the Limit!</p>
-    <iframe src="https://www.desmos.com/calculator/5knl5t9i1h?embed" width="100%" height="300px" style="border: 1px solid #ccc; border-radius: 4px" frameborder=0></iframe>
-    <p style="font-size: 0.8em; text-align: center; color: #666;">(Move the slider 'n' to see the points approach y=1)</p>
+<div style="background: var(--md-default-bg); padding: 10px; border-radius: 8px; border: 1px solid var(--md-default-fg-color--lightest); margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <p style="text-align: center; font-weight: bold; margin-bottom: 10px;">📈 Interactive Graph: Watch the Limit!</p>
+    <iframe src="https://www.desmos.com/calculator/j6p5q2p5?embed" width="100%" height="350px" style="border: 1px solid #ccc; border-radius: 4px" frameborder=0></iframe>
+    <p style="font-size: 0.8em; text-align: center; opacity: 0.8; margin-top: 5px;">(Drag the slider <b>'n'</b> or the blue point to see it approach y=1)</p>
 </div>
 
 <h3 id="example">Example</h3>
@@ -767,82 +767,82 @@ $<span class="arithmatex">\(\lim_{n \to \infty} (1 + 1/n) = 1\)</span>$</p>
 <div id="cheat-sheet-btn" onclick="toggleCheatSheet()">⚡ Formulas</div>
 
 <div id="cheat-sheet-panel">
-    <h3 style="margin-top:0">⚡ Quick Formulas</h3>
-    <hr>
+    <h3 style="margin-top:0; border-bottom: 2px solid var(--md-primary-fg-color); padding-bottom: 10px;">⚡ Cheat Sheet</h3>
     <p><b>Difference of Squares:</b><br>$a^2 - b^2 = (a-b)(a+b)$</p>
     <p><b>Limits at Infinity:</b><br>$\frac{n^k}{n^k} \to 1$, $\frac{1}{n} \to 0$</p>
     <p><b>Common Limit:</b><br>$\lim_{x \to 0} \frac{\sin x}{x} = 1$</p>
-    <button onclick="toggleCheatSheet()" style="margin-top: 20px; width: 100%; padding: 5px; cursor: pointer;">Close</button>
+    <button onclick="toggleCheatSheet()" style="margin-top: 20px; width: 100%; padding: 8px; cursor: pointer; background: var(--md-default-fg-color--lightest); border: none; border-radius: 4px;">Close Panel</button>
 </div>
 
 <style>
-  /* Genel Kutu Stilleri */
+  /* Kutu Stilleri */
   .quiz-box {
     background: var(--md-code-bg);
     padding: 15px;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     transition: all 0.3s ease;
   }
   .q-title { margin: 0 0 10px 0; font-weight: 500; }
   .quiz-input {
     background: var(--md-default-bg);
     color: var(--md-text-color);
-    padding: 8px;
+    padding: 10px;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 4px;
   }
   .quiz-msg { margin-top: 8px; font-size: 0.9rem; font-weight: bold; min-height: 20px;}
 
-  /* Çoktan Seçmeli Butonlar */
+  /* Butonlar */
   .mcq-btn {
-    padding: 8px 15px;
+    padding: 10px 20px;
     border: 1px solid var(--md-primary-fg-color);
     background: var(--md-default-bg);
     color: var(--md-text-color);
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.2s;
+    font-weight: bold;
   }
-  .mcq-btn:hover { background: var(--md-primary-fg-color--light); }
+  .mcq-btn:hover { background: var(--md-primary-fg-color--light); color: white;}
 
-  /* Cheat Sheet (Formül Kağıdı) */
+  /* Cheat Sheet */
   #cheat-sheet-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: var(--md-primary-fg-color);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     font-weight: bold;
     z-index: 2000;
   }
   #cheat-sheet-panel {
     position: fixed;
     top: 50%;
-    right: -300px; /* Başlangıçta gizli */
+    right: -320px; /* Gizli */
     transform: translateY(-50%);
-    width: 250px;
+    width: 280px;
     background: var(--md-default-bg);
     border: 2px solid var(--md-primary-fg-color);
     padding: 20px;
-    border-radius: 8px 0 0 8px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-    transition: right 0.3s ease;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Havalı geçiş */
     z-index: 2001;
   }
   #cheat-sheet-panel.open { right: 0; }
 </style>
 
 <script>
-  // MATHJAX AYARLARI
+  // MATHJAX
   window.MathJax = {
     tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true },
     startup: {
@@ -855,23 +855,23 @@ $<span class="arithmatex">\(\lim_{n \to \infty} (1 + 1/n) = 1\)</span>$</p>
     }
   };
 
-  // İLERLEME SİSTEMİ (Gamification)
+  // İLERLEME MANTIĞI
   let totalQuestions = 5;
-  let solvedQuestions = new Set(); // Doğru bilinenleri saklar
+  let solvedQuestions = new Set();
 
   function updateProgress(id) {
     solvedQuestions.add(id);
     let percent = Math.round((solvedQuestions.size / totalQuestions) * 100);
     document.getElementById('progress-bar').style.width = percent + "%";
-    document.getElementById('progress-text').innerText = percent + "% Completed";
+    document.getElementById('progress-text').innerText = percent + "%";
 
     if (percent === 100) {
-      document.getElementById('progress-text').innerText = "🎉 100% COMPLETED! 🎉";
-      document.getElementById('progress-bar').style.background = "#ffd700"; // Altın rengi
+      document.getElementById('progress-text').innerText = "🎉 COMPLETED!";
+      document.getElementById('progress-bar').style.background = "#ffd700";
     }
   }
 
-  // TEXT INPUT KONTROLÜ
+  // NORMAL SORU KONTROLÜ
   function checkEnter(event, inputId, correctAnswer, feedbackId) {
     if (event.key === "Enter") {
       var input = document.getElementById(inputId);
@@ -883,43 +883,42 @@ $<span class="arithmatex">\(\lim_{n \to \infty} (1 + 1/n) = 1\)</span>$</p>
       if (userVal == correctAnswer) {
         feedback.innerHTML = "✅ Correct!";
         feedback.style.color = "var(--md-primary-fg-color)";
-        updateProgress(qId); // İlerlemeyi güncelle
+        updateProgress(qId);
       } else {
         feedback.innerHTML = "❌ Try again or use the Hint 💡";
         feedback.style.color = "#ef5350";
-        // Yanlış yapınca Çözüm kutusunu (DETAILS) bul ve aç
-        var solutionDetails = container.nextElementSibling;
-        if (solutionDetails && solutionDetails.tagName === 'DETAILS' && solutionDetails.className === '') {
-            // Burası ipucu değil, ana çözüm ise açma opsiyonel
-            // solutionDetails.open = true; 
-        }
       }
     }
   }
 
-  // ÇOKTAN SEÇMELİ KONTROLÜ (MCQ)
+  // TEST SORUSU KONTROLÜ
   function checkMCQ(btn, isCorrect, feedbackId) {
     var feedback = document.getElementById(feedbackId);
     var container = btn.closest('.quiz-box');
     var qId = container.getAttribute('data-id');
 
-    // Önceki renkleri temizle
+    // Renkleri sıfırla
     var buttons = container.querySelectorAll('button');
-    buttons.forEach(b => b.style.background = "var(--md-default-bg)");
+    buttons.forEach(b => {
+        b.style.background = "var(--md-default-bg)";
+        b.style.color = "var(--md-text-color)";
+    });
 
     if (isCorrect) {
-      btn.style.background = "#a5d6a7"; // Yeşilimsi
+      btn.style.background = "#4caf50"; // Yeşil
+      btn.style.color = "white";
       feedback.innerHTML = "✅ Correct!";
       feedback.style.color = "var(--md-primary-fg-color)";
       updateProgress(qId);
     } else {
-      btn.style.background = "#ef9a9a"; // Kırmızımsı
+      btn.style.background = "#ef5350"; // Kırmızı
+      btn.style.color = "white";
       feedback.innerHTML = "❌ Incorrect.";
       feedback.style.color = "#ef5350";
     }
   }
 
-  // FORMÜL KAĞIDI AÇ/KAPA
+  // FORMÜL MENÜSÜ
   function toggleCheatSheet() {
     document.getElementById('cheat-sheet-panel').classList.toggle('open');
   }
